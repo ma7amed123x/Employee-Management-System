@@ -4,7 +4,7 @@ A full-stack CRUD web application for managing employee records, built with Spri
 
 ## 📋 Overview
 
-This application provides a simple and intuitive interface to manage employee information. It demonstrates core Spring Boot concepts including MVC architecture, JPA/Hibernate integration, and RESTful API design.
+This application provides a simple and intuitive interface to manage employee information. It demonstrates core Spring Boot concepts including MVC architecture, JPA/Hibernate integration, and CRUD API design.
 
 ## ✨ Features
 
@@ -12,7 +12,6 @@ This application provides a simple and intuitive interface to manage employee in
 - **Add Employee** - Create new employee records with form validation
 - **Update Employee** - Edit existing employee information
 - **Delete Employee** - Remove employee records from the system
-- **RESTful API** - Full CRUD API endpoints for programmatic access
 
 ## 🛠️ Technologies Used
 
@@ -26,14 +25,18 @@ This application provides a simple and intuitive interface to manage employee in
 
 ## 📊 Database Schema
 
-### Employee Table
-| Column      | Type         | Description           |
-|-------------|-------------|-----------------------|
-| id          | BIGINT (PK) | Auto-generated ID     |
-| first_name  | VARCHAR     | Employee's first name |
-| last_name   | VARCHAR     | Employee's last name  |
-| email       | VARCHAR     | Employee's email      |
+### 🔗 Application Endpoints
 
+| Method | Endpoint                              | Description                    |
+|--------|---------------------------------------|--------------------------------|
+| GET    | `/`                                   | Redirect to employees list     |
+| GET    | `/employees`                          | Display all employees          |
+| GET    | `/employees/showFormForAdd`           | Show form to add employee      |
+| POST   | `/employees/saveEmployee`             | Save new or updated employee   |
+| GET    | `/employees/showFormForUpdate`        | Show form to edit employee     |
+| GET    | `/employees/delete`                   | Delete employee by ID          |
+
+**Note:** This is an MVC web application using Thymeleaf templates, not a REST API.
 ## 🚀 Getting Started
 
 ### Prerequisites
